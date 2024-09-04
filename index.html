@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="An Iterative Refinement-based Framework for Training-free Segmentation.">
+  <meta name="keywords" content="Semantic Segmentation, Stable Diffusion, Attention Mechanism, Iterative Refinement">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">iSeg: An Iterative Refinement-based Framework for Training-free Segmentation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/linsun449">Lin Sun</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/JialeCao001">Jiale Cao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/JialeCao001">Jin Xie</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/JialeCao001">Fahad Shahbaz Khan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/JialeCao001">Yanwei Pang</a><sup>1,4</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tianjin University,</span>
+            <span class="author-block"><sup>2</sup>Mohamed bin Zayed University of Artificial Intelligence,</span>
+            <span class="author-block"><sup>3</sup>Chongqing University,</span>
+            <span class="author-block"><sup>4</sup>Shanghai Artificial Intelligence Laboratory</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper(Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv(Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(Soon)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/segmentation.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">iSeg</span>
+        provides a more and more accurate semantic segmentation results with the increasing iterations.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="200%">
+            <source src="static/videos/point_apple.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/line_ground.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/box_chair.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Stable diffusion  has demonstrated strong image synthesis ability to given text descriptions,
+            suggesting it to contain strong semantic clue for grouping  objects. Inspired by this,
+            researchers have explored employing stable diffusion  for training-free segmentation.
+            Most existing approaches either simply employ cross-attention map or refine it by self-attention map,
+            to generate segmentation masks.
+          </p>
+          <p>
+            We believe that iterative refinement with self-attention map would lead to better results.
+            However, we empirically demonstrate that such a refinement is sub-optimal likely due to the
+            self-attention map containing irrelevant global information which hampers accurately refining
+            cross-attention map with multiple iterations.
+          </p>
+          <p>
+            To address this, we propose an iterative refinement framework for training-free segmentation, named iSeg,
+            having an entropy-reduced self-attention module which utilizes a gradient descent scheme to reduce
+            the entropy of self-attention map, thereby suppressing the weak responses corresponding to
+            irrelevant global information. Leveraging the entropy-reduced self-attention module,
+            our iSeg stably improves refined cross-attention map with iterative refinement.
+            Further, we design a category-enhanced cross-attention module to generate accurate cross-attention map,
+            providing a better initial input for iterative refinement.
+          </p>
+          <p>
+            Extensive experiments across different datasets and diverse segmentation tasks
+            (weakly-supervised semantic segmentation, open-vocabulary semantic segmentation,
+            unsupervised segmentation, and mask generation on synthetic dataset) reveal the merits of
+            proposed contributions, leading to promising performance on  diverse segmentation tasks. For
+            unsupervised semantic segmentation on Cityscapes, our iSeg achieves an absolute gain of 3.8%
+            in terms of mIoU compared to the best existing training-free approach in literature.
+            Moreover, our proposed iSeg can support segmentation with different kind of images and interactions.
+            Our source code and models will be publicly released.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Framework</h2>
+        <img src="static/images/framework.png">
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-4">Natural Images Segmentation</h2>
+          <img src="static/images/natural.png">
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-4">Cross Domain Segmentation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="static/images/domain.png">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+        <div class="content has-text-justified">
+          <p>
+            We provide a cross attention map animation which start with the box containing
+            a chair. With the increasing iterations, the box will become exactly the mask of the chair.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="static/animation/overlay_1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="1" max="50" value="1" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="static/animation/overlay_50.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Interaction</h2>
+        <p>
+          We also provide an interaction demo, in which we can segment objects
+          by points, lines, and boxes.
+        </p>
+        <div class="publication-video">
+          <video poster="" id="demo" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/demo.mp4"  type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website refers to <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>, and
+            is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
