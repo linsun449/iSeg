@@ -158,36 +158,31 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Stable diffusion  has demonstrated strong image synthesis ability to given text descriptions,
-            suggesting it to contain strong semantic clue for grouping  objects. Inspired by this,
-            researchers have explored employing stable diffusion  for training-free segmentation.
-            Most existing approaches either simply employ cross-attention map or refine it by self-attention map,
-            to generate segmentation masks.
+            Stable diffusion has demonstrated strong image synthesis ability to given text descriptions, suggesting it to contain strong
+            semantic clue for grouping objects. The researchers have explored employing stable diffusion for training-free segmentation. Most
+            existing approaches refine cross-attention map by self-attention map once, demonstrating that self-attention map contains useful
+            semantic information to improve segmentation.
           </p>
+
           <p>
-            We believe that iterative refinement with self-attention map would lead to better results.
-            However, we empirically demonstrate that such a refinement is sub-optimal likely due to the
-            self-attention map containing irrelevant global information which hampers accurately refining
-            cross-attention map with multiple iterations.
+            To fully utilize self-attention map, we present a deep experimental analysis on iteratively
+            refining cross-attention map with self-attention map, and propose an effective iterative refinement framework for training-free
+            segmentation, named iSeg. The proposed iSeg introduces an entropy-reduced self-attention module that utilizes a gradient descent
+            scheme to reduce the entropy of self-attention map, thereby suppressing the weak responses corresponding to irrelevant global
+            information. Leveraging the entropy-reduced self-attention module, our iSeg stably improves refined cross-attention map with iterative
+            refinement. Further, we design a category-enhanced cross-attention module to generate accurate cross-attention map, providing a
+            better initial input for iterative refinement.
           </p>
-          <p>
-            To address this, we propose an iterative refinement framework for training-free segmentation, named iSeg,
-            having an entropy-reduced self-attention module which utilizes a gradient descent scheme to reduce
-            the entropy of self-attention map, thereby suppressing the weak responses corresponding to
-            irrelevant global information. Leveraging the entropy-reduced self-attention module,
-            our iSeg stably improves refined cross-attention map with iterative refinement.
-            Further, we design a category-enhanced cross-attention module to generate accurate cross-attention map,
-            providing a better initial input for iterative refinement.
-          </p>
+
           <p>
             Extensive experiments across different datasets and diverse segmentation tasks
-            (weakly-supervised semantic segmentation, open-vocabulary semantic segmentation,
-            unsupervised segmentation, and mask generation on synthetic dataset) reveal the merits of
-            proposed contributions, leading to promising performance on  diverse segmentation tasks. For
-            unsupervised semantic segmentation on Cityscapes, our iSeg achieves an absolute gain of 3.8%
-            in terms of mIoU compared to the best existing training-free approach in literature.
-            Moreover, our proposed iSeg can support segmentation with different kinds of images and interactions.
+            (weakly-supervised semantic segmentation, open-vocabulary semantic segmentation, unsupervised segmentation, and mask
+            generation on synthetic dataset) reveal the merits of proposed contributions, leading to promising performance on diverse
+            segmentation tasks. For unsupervised semantic segmentation on Cityscapes, our iSeg achieves an absolute gain of 3.8% in terms of
+            mIoU compared to the best existing training-free approach in literature. Moreover, our proposed iSeg can support segmentation with
+            different kinds of images and interactions.
           </p>
+
         </div>
       </div>
     </div>
